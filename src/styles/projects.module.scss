@@ -1,0 +1,152 @@
+@import "theme";
+
+.projects {
+  position: relative;
+  background-color: $background-color;
+  height: 100%;
+  padding-bottom: 2.5rem;
+
+  &__bio__image {
+    height: 17vh;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    h1 {
+      color: $secondary-color;
+      font-size: 2rem;
+    }
+
+    .text__secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__items {
+    max-width: 90vw;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 100px;
+    justify-content: space-evenly;
+    justify-items: center;
+    animation-name: appear;
+    animation-duration: 1s;
+    padding-bottom: 1.5rem;
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 5px solid $secondary-color;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgb(173, 173, 173);
+    overflow: hidden;
+
+    h1 {
+      text-align: center;
+      color: $secondary-color;
+      font-size: 1rem;
+    }
+    p {
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    &__img {
+      object-fit: fill;
+      max-width: 500px;
+      max-height: 360px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $secondary-color;
+      opacity: 0;
+      @include transition-quick;
+    }
+
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.95;
+      }
+      .projects__btn,
+      .projects__description {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    top: 0;
+    height: 40%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  &__btn {
+    opacity: 0;
+    color: white;
+    font-size: 1.3rem;
+    text-decoration: none;
+    @include transition-quick;
+
+    &:hover {
+      color: $background-color;
+      @include transition-quick;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    color: secondary-color;
+    z-index: 1;
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-style: italic;
+    cursor: default;
+    @include transition-quick;
+  }
+}
+
+@for $i from 1 through 6 {
+  .projects__item__img:nth-child(#{$i}) {
+    transition-delay: ($i * 1s) + 0.15s;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .projects__item {
+    p {
+      font-size: 1rem;
+    }
+    &__img {
+      max-width: 260px;
+    }
+  }
+  .projects__bio__image {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}

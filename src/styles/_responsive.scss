@@ -1,0 +1,76 @@
+/* @include media-md {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .projects__item {
+    margin: 1rem;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background: transparent;
+      text-align: right;
+
+      &__item {
+        display: inline;
+        padding-right: 1.5rem;
+      }
+    }
+  }
+
+  .home__name {
+    font-size: 5rem;
+  }
+
+  .about__bio {
+    font-size: 1.5rem;
+  }
+
+  .edu {
+    &__institution {
+      flex-direction: row !important;
+    }
+  }
+
+  .projects {
+    &__bio-image {
+      height: 55vh;
+    }
+    &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .text-secondary {
+      font-size: 3rem;
+    }
+  }
+  .my-social-icons a img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .contact__list {
+    font-size: 1.5rem;
+  }
+
+  .to-top img {
+    width: 56px;
+    padding: 0.2rem;
+  }
+}
+
+@include media-lg {
+}
+
+@include media-xl {
+  .projects__item__img {
+    width: 400px;
+    height: 350px;
+  }
+}
+ */

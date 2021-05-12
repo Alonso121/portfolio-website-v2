@@ -1,0 +1,22 @@
+$primary-color: hsl(18, 100%, 93%);
+$secondary-color: hsl(17, 68%, 55%);
+$background-color: #0c0603;
+$transp-background-color: #0c0603cc;
+$border-color: rgb(231, 231, 231);
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin transition-quick {
+  transition: all 0.2s ease-in-out;
+}

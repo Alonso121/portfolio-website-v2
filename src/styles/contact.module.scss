@@ -1,0 +1,61 @@
+@import "theme";
+.contact {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $transp-background-color;
+  background-image: url("/img/background.jpg");
+  background-blend-mode: multiply;
+  background-size: cover;
+
+  .container {
+    padding-top: 30vh;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: $secondary-color;
+    }
+
+    &__list {
+      display: block;
+      font-size: 1.5rem;
+      list-style-type: none;
+      animation-name: appear;
+      animation-duration: 0.5s;
+
+      li {
+        color: $primary-color;
+        margin: 1rem;
+
+        .link {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .projects__item__img {
+    max-width: 260px;
+  }
+  .container {
+    h1 {
+      font-size: 2.5rem;
+    }
+    li {
+      font-size: 1.2rem;
+    }
+  }
+}
+@media only screen and (max-width: 459px) {
+  .container {
+    h1 {
+      font-size: 2rem !important;
+      margin: 0.5rem 1rem !important;
+    }
+  }
+}

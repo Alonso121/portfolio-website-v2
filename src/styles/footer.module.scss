@@ -1,0 +1,18 @@
+$footer-color: hsl(17, 68%, 55%);
+
+.footer {
+  font-size: 1rem;
+  position: absolute;
+  color: $footer-color;
+  bottom: 0.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: right;
+  padding: 1rem;
+}
+
+@media only screen and (max-width: 360px) {
+  .footer {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,20 @@
+@import "nav";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+ul,
+figure {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}

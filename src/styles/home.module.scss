@@ -1,0 +1,50 @@
+@import "theme";
+
+.home {
+  color: $primary-color;
+
+  height: 100vh;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+  background: $transp-background-color;
+  background-image: url("/img/background.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+
+  .my {
+    padding-top: 30vh;
+
+    &__name {
+      font-size: 5rem;
+      margin-top: 0.5rem;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid $border-color;
+      animation-name: appear;
+      animation-duration: 2.5s;
+
+      &__last {
+        color: $secondary-color;
+        font-weight: 700;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .my__name {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .my {
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    &__name {
+      font-size: 2rem !important;
+    }
+  }
+}
