@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import {
   AiOutlineLinkedin,
   AiOutlineGithub,
@@ -7,39 +6,42 @@ import {
 
 import styles from "../styles/icons.module.scss";
 
-const Icons = () => {
-  const route = useRouter();
+const iconsInfo = [
+  {
+    id: 1,
+    link: "https://twitter.com/TahiriAlison",
+    alt: "twiter link",
+    component: <AiOutlineTwitter />,
+  },
+  {
+    id: 2,
+    link: "https://www.linkedin.com/in/alison-tahiri-0421b2205/",
+    alt: "linkedin link",
+    component: <AiOutlineLinkedin />,
+  },
+  {
+    id: 3,
+    link: "https://github.com/Alonso121",
+    alt: "github link",
+    component: <AiOutlineGithub />,
+  },
+];
 
+const Icons = () => {
   return (
     <div className={styles.social__icons}>
-      <a
-        className={styles.icon}
-        href="https://twitter.com/TahiriAlison"
-        target="_blank"
-        alt="twitter link"
-        rel="noreferrer"
-      >
-        <AiOutlineTwitter />
-      </a>
-
-      <a
-        className={styles.icon}
-        href="https://www.linkedin.com/in/alison-tahiri-0421b2205/"
-        alt="linkedin link"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <AiOutlineLinkedin />
-      </a>
-      <a
-        className={styles.icon}
-        href="https://github.com/Alonso121"
-        target="_blank"
-        alt="github link"
-        rel="noreferrer"
-      >
-        <AiOutlineGithub />
-      </a>
+      {iconsInfo.map(({ alt, component, id, link }) => (
+        <a
+          key={id}
+          className={styles.icon}
+          href={link}
+          target="_blank"
+          alt={alt}
+          rel="noreferrer"
+        >
+          {component}
+        </a>
+      ))}
     </div>
   );
 };

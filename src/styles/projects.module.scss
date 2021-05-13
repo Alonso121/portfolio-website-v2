@@ -52,7 +52,7 @@
       font-size: 1rem;
     }
     p {
-      color: white;
+      color: $primary-color;
       font-size: 1.1rem;
     }
 
@@ -100,7 +100,7 @@
 
   &__btn {
     opacity: 0;
-    color: white;
+    color: $primary-color;
     font-size: 1.3rem;
     text-decoration: none;
     @include transition-quick;
