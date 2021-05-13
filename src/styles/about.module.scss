@@ -33,13 +33,13 @@ $sections-bckg: rgba(255, 255, 255, 0.06);
     object-fit: cover;
     margin-bottom: 1.5rem;
   }
+  /*-------------Tech & Languages Section----------------*/
 
   .languages {
     display: flex;
     flex-wrap: wrap;
   }
 
-  /*-------------Tech Section----------------*/
   .tech {
     margin: 1rem auto;
     max-width: 90%;
@@ -80,12 +80,11 @@ $sections-bckg: rgba(255, 255, 255, 0.06);
 
   .section {
     width: 85%;
-    margin: 2rem auto;
-    padding: 1rem 0;
+    margin: 0rem auto;
     background-color: $sections-bckg;
 
     &__title {
-      padding: 1rem;
+      margin: 0.5rem 1rem;
       font-size: 2rem;
     }
 
@@ -167,6 +166,13 @@ $sections-bckg: rgba(255, 255, 255, 0.06);
     &__img {
       max-width: 240px !important;
       max-height: 180px !important;
+    }
+  }
+
+  .tech__pic_container {
+    .img {
+      width: 40px !important;
+      height: 40px !important;
     }
   }
 }

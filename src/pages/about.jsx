@@ -34,6 +34,9 @@ const About = () => {
             <p>{headerData.description}</p>
           </div>
         </section>
+
+        <hr />
+
         <div className={styles.languages}>
           {/* Tech section ----------------------------------------------------- */}
           <section className={styles.tech}>
@@ -61,6 +64,8 @@ const About = () => {
             </div>
           </section>
         </div>
+
+        <hr />
 
         {/* Education section ----------------------------------------------------- */}
         <section className={styles.section}>
