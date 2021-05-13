@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { AiOutlineDownload } from "react-icons/ai";
 
 const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -37,6 +38,18 @@ const Nav = () => {
               </li>
             );
           })}
+          <li
+            className={`menu__nav__item ${showMenu && "open"}
+                `}
+          >
+            <a
+              href="/AlisonTahiriCV.pdf"
+              className="menu__nav__item__link"
+              download
+            >
+              CV
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

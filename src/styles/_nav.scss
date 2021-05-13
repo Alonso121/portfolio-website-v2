@@ -24,8 +24,12 @@
         text-decoration: none;
         color: $secondary-color;
         margin: 0.7rem auto;
-        padding: 0.3rem 0.7rem;
+        padding: 0.3rem 0.6rem;
         @include transition-ease;
+      }
+
+      &__link:hover {
+        color: $primary-color;
       }
     }
   }
