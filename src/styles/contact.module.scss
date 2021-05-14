@@ -10,38 +10,34 @@
   background-blend-mode: multiply;
   background-size: cover;
 
-  .container {
-    padding-top: 30vh;
+  &__list {
+    display: block;
+    font-size: 1.5rem;
+    list-style-type: none;
+    animation-name: appear;
+    animation-duration: 0.5s;
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 2rem;
-      color: $secondary-color;
-    }
+    li {
+      color: $primary-color;
+      margin: 1rem;
 
-    &__list {
-      display: block;
-      font-size: 1.5rem;
-      list-style-type: none;
-      animation-name: appear;
-      animation-duration: 0.5s;
-
-      li {
+      .link {
         color: $primary-color;
-        margin: 1rem;
-
-        .link {
-          color: $primary-color;
-        }
       }
     }
   }
 }
+.container {
+  padding-top: 30vh;
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: $secondary-color;
+  }
+}
 
 @media only screen and (max-width: 600px) {
-  .projects__item__img {
-    max-width: 260px;
-  }
   .container {
     h1 {
       font-size: 2.5rem;
@@ -51,11 +47,11 @@
     }
   }
 }
-@media only screen and (max-width: 459px) {
+@media only screen and (max-width: 450px) {
   .container {
     h1 {
-      font-size: 2rem !important;
-      margin: 0.5rem 1rem !important;
+      font-size: 2rem;
+      margin: 0.5rem 1rem;
     }
   }
 }

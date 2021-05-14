@@ -15,13 +15,14 @@ const Contact = () => {
           name="description"
           content="Hey guys. Here are my contact details. Let's discuss our next project or simply say hi!"
         />
+        <link rel="preload" href="/img/background.jpg" as="image" />
       </Head>
 
       <main className={styles.contact}>
         <section className={styles.container}>
           <h1>Let's get in touch:</h1>
 
-          <ul className={styles.container__list}>
+          <ul className={styles.contact__list}>
             <li>
               <HiOutlineMailOpen />
               Email:

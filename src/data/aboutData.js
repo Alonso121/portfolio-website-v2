@@ -1,6 +1,6 @@
 export const headerData = {
   img: {
-    src: "img/alison-foto.png",
+    src: "/img/alison-foto.png",
     alt: "Alison Tahiri picture",
   },
   description: `I'm a Tirana based Web Developer. I am a former Business Manager

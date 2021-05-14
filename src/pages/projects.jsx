@@ -25,13 +25,17 @@ const Projects = () => {
           {/* Projects section ----------------------------------------------------- */}
           <div className={styles.projects__items}>
             {projectsData.map(
-              ({ description, git, website, id, img, title }) => (
+              ({ description, git, id, img, preload, title, website }) => (
                 <div key={id} className={styles.projects__item}>
-                  <img
-                    src={img.src}
-                    alt={img.alt}
-                    className={styles.projects__item__img}
-                  />
+                  <div className={styles.projects__item__img}>
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      layout={"fill"}
+                      objectFit={"cover"}
+                      priority={preload}
+                    />
+                  </div>
                   <div className={styles.projects__btns}>
                     {website && (
                       <a

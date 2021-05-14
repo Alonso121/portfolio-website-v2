@@ -16,6 +16,7 @@ export default function Home() {
           name="google-site-verification"
           content="-lJNVr3o0jZMLkp20jI4Ker-ZayzmMgzvw9LuaeLO8c"
         />
+        <link rel="preload" href="/img/background.jpg" as="image" />
       </Head>
 
       <main className={styles.home}>

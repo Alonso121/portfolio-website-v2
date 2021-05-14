@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import Image from "next/image";
 
 import Footer from "../components/Footer";
 import ToTop from "../components/ToTop";
@@ -26,25 +27,35 @@ const About = () => {
         {/* My personal short description ---------------------------------------- */}
         <section>
           <div className={styles.about__bio}>
-            <img
-              className={styles.about__bio_image}
-              src={headerData.img.src}
-              alt={headerData.img.alt}
-            />
+            <div className={styles.about__bio__image}>
+              <Image
+                src={headerData.img.src}
+                alt={headerData.img.alt}
+                layout={"fill"}
+                objectFit={"cover"}
+              />
+            </div>
             <p>{headerData.description}</p>
           </div>
         </section>
 
-        <hr />
+        <hr className={styles.hr} />
 
         <div className={styles.languages}>
           {/* Tech section ----------------------------------------------------- */}
           <section className={styles.tech}>
             <h1>Tech I use:</h1>
-            <div className={styles.tech__pic_container}>
+            <div className={styles.tech__pic__container}>
               {tech.map(({ alt, caption, id, src }) => (
                 <figure key={id}>
-                  <img src={src} alt={alt} className={styles.img} />
+                  <div className={styles.tech__pic__container__img}>
+                    <Image
+                      src={src}
+                      alt={alt}
+                      layout={"fill"}
+                      objectFit={"contain"}
+                    />
+                  </div>
                   <figcaption>{caption}</figcaption>
                 </figure>
               ))}
@@ -54,10 +65,17 @@ const About = () => {
           {/* Lang section ----------------------------------------------------- */}
           <section className={styles.tech}>
             <h1>Languages I know:</h1>
-            <div className={styles.tech__pic_container}>
+            <div className={styles.tech__pic__container}>
               {lang.map(({ alt, caption, id, src }) => (
                 <figure key={id}>
-                  <img src={src} alt={alt} className={styles.img} />
+                  <div className={styles.tech__pic__container__img}>
+                    <Image
+                      src={src}
+                      alt={alt}
+                      layout={"fill"}
+                      objectFit={"contain"}
+                    />
+                  </div>
                   <figcaption>{caption}</figcaption>
                 </figure>
               ))}
@@ -65,7 +83,7 @@ const About = () => {
           </section>
         </div>
 
-        <hr />
+        <hr className={styles.hr} />
 
         {/* Education section ----------------------------------------------------- */}
         <section className={styles.section}>
@@ -77,18 +95,21 @@ const About = () => {
                 <h3>{institution}</h3>
                 <p>{description}</p>
               </div>
-              <Link href="/img/codecademy.png">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className={styles.section__img}
-                />
+              <Link href={img.src}>
+                <div className={styles.section__institution__img}>
+                  <Image
+                    src={img.src}
+                    alt={img.alt}
+                    layout={"fill"}
+                    objectFit={"cover"}
+                  />
+                </div>
               </Link>
             </div>
           ))}
         </section>
 
-        <hr />
+        <hr className={styles.hr} />
 
         {/* Work Experience section ----------------------------------------------------- */}
         <section className={styles.section}>

@@ -5,6 +5,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 
 const Nav = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const openClass = showMenu ? "open" : "";
   const route = useRouter();
   const links = [
     { id: 1, title: "Home", path: "/" },
@@ -16,19 +17,19 @@ const Nav = () => {
   return (
     <header>
       <div className="menu__btn" onClick={() => setShowMenu(!showMenu)}>
-        <span className={`menu__btn__burger ${showMenu ? "open" : ""}`}></span>
+        <span className={`menu__btn__burger ${openClass}`}></span>
       </div>
 
-      <nav className={`nav ${showMenu ? "open" : ""}`}>
+      <nav className={`nav ${openClass}`}>
         <ul
-          className={`menu__nav ${showMenu ? "open" : ""}`}
+          className={`menu__nav ${openClass}`}
           onClick={() => setShowMenu(!showMenu)}
         >
           {links.map(({ id, title, path }) => {
             return (
               <li
                 key={id}
-                className={`menu__nav__item ${showMenu && "open"}
+                className={`menu__nav__item ${openClass}
                   ${route.pathname === path && "active"}            
                 `}
               >
@@ -39,7 +40,7 @@ const Nav = () => {
             );
           })}
           <li
-            className={`menu__nav__item ${showMenu && "open"}
+            className={`menu__nav__item ${openClass}
                 `}
           >
             <a

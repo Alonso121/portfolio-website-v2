@@ -11,26 +11,26 @@
   background-image: url("/img/background.jpg");
   background-size: cover;
   background-blend-mode: multiply;
+}
+.my {
+  padding-top: 30vh;
 
-  .my {
-    padding-top: 30vh;
+  &__name {
+    font-size: 5rem;
+    margin-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid $border-color;
+    animation-name: appear;
+    animation-duration: 2.5s;
 
-    &__name {
-      font-size: 5rem;
-      margin-top: 0.5rem;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
-      border-bottom: 2px solid $border-color;
-      animation-name: appear;
-      animation-duration: 2.5s;
-
-      &__last {
-        color: $secondary-color;
-        font-weight: 700;
-      }
+    &__last {
+      color: $secondary-color;
+      font-weight: 700;
     }
   }
 }
+
 @media only screen and (max-width: 1000px) {
   .my__name {
     font-size: 2.5rem;
@@ -44,7 +44,7 @@
     }
 
     &__name {
-      font-size: 2rem !important;
+      font-size: 2rem;
     }
   }
 }
