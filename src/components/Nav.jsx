@@ -46,7 +46,8 @@ const Nav = () => {
             <a
               href="/AlisonTahiriCV.pdf"
               className="menu__nav__item__link"
-              download
+              target="_blank"
+              rel="noopener"
             >
               CV
             </a>

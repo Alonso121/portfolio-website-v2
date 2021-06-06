@@ -37,7 +37,7 @@ const Icons = () => {
           href={link}
           target="_blank"
           alt={alt}
-          rel="noreferrer"
+          rel="noopener noreferrer"
         >
           {component}
         </a>
